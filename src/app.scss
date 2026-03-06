@@ -1,0 +1,140 @@
+@layer reset, base, components, modules, utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+@font-face {
+    font-family: "Mojangles";
+    src: local("Mojangles"), url("/fonts/Mojangles.woff2") format("woff2");
+}
+
+/* @font-face {
+    font-family: "Monocraft";
+    src:
+        local("Monocraft"),
+        url("/fonts/Monocraft.ttf") format("truetype");
+} */
+
+@layer reset {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@layer base {
+    /* ── CSS Variables ─────────────────────────────────────────────── */
+    :root {
+        /* Brand */
+        --green: #4ade80;
+        --green-dark: #16a34a;
+        --green-light: #dcfce7;
+        --green-border: #bbf7d0;
+        --green-mid: #86efac;
+
+        /* Neutrals */
+        --bg: #f9f9f8;
+        --white: #ffffff;
+        --stone-light: #f5f5f4;
+        --stone-mid: #e7e5e4;
+        --text: #1c1917;
+        --muted: #78716c;
+        --border: #b6aea8;
+
+        /* Accent tints */
+        --tint-a: #dcfce7;
+        --tint-b: #dbeafe;
+        --tint-c: #fef9c3;
+        --tint-d: #fce7f3;
+        --tint-e: #ede9fe;
+        --tint-f: #ffedd5;
+        --tint-g: #d1fae5;
+        --tint-h: #fee2e2;
+
+        /* Semantic */
+        --status-online: #22c55e;
+        --status-offline: #d1d5db;
+        --severity-low: #fbbf24;
+        --severity-mid: #f97316;
+        --severity-high: #ef4444;
+
+        /* Badges */
+        --badge-example-bg: #eff6ff;
+        --badge-example-text: #1d4ed8;
+        --badge-example-border: #bfdbfe;
+        --badge-punish-bg: #fef2f2;
+        --badge-punish-text: #b91c1c;
+        --badge-punish-border: #fecaca;
+
+        /* Hero */
+        --hero-bg-start: #f0fdf4;
+        --hero-bg-mid: #dcfce7;
+        --hero-bg-end: #ffffff;
+
+        /* Misc */
+        --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 4px 20px rgba(74, 222, 128, 0.2);
+        --radius: 12px;
+        --modal-overlay: rgba(0, 0, 0, 0.35);
+        --modal-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        --nav-bg: rgba(255, 255, 255, 0.92);
+
+        --font: "Fira Sans", sans-serif;
+        --font-caption: "Mojangles", monospace;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+    }
+
+    /* ── Tint utility classes ───────────────────────────────────────── */
+    .tint-a {
+        background: var(--tint-a);
+    }
+    .tint-b {
+        background: var(--tint-b);
+    }
+    .tint-c {
+        background: var(--tint-c);
+    }
+    .tint-d {
+        background: var(--tint-d);
+    }
+    .tint-e {
+        background: var(--tint-e);
+    }
+    .tint-f {
+        background: var(--tint-f);
+    }
+    .tint-g {
+        background: var(--tint-g);
+    }
+    .tint-h {
+        background: var(--tint-h);
+    }
+}
