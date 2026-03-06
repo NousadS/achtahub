@@ -40,6 +40,20 @@
         max-width: 1000px;
         margin: 0 auto;
 
+        @media (max-width: 1000px) {
+            & {
+                padding: none;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            & {
+                padding: none;
+                max-width: 300px;
+            }
+        }
+
         .label {
             font-family: var(--font-caption);
             font-size: 0.8rem;

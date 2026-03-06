@@ -50,7 +50,7 @@
     </ul>
 </nav>
 
-<style>
+<style lang="scss">
     nav {
         --scrolled: 0;
 
@@ -77,12 +77,7 @@
         flex-wrap: nowrap;
     }
 
-    nav img {
-        height: calc(20dvh - 10dvh * var(--scrolled));
-        aspect-ratio: 1 / 1;
-    }
-
-    nav ul {
+    ul {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -91,6 +86,14 @@
         gap: 2rem;
         list-style: none;
         width: 40dvw;
+
+        @media (max-width: 780px) {
+            * {
+                display: none;
+                width: 0dvw;
+                height: 0dvh;
+            }
+        }
     }
 
     nav ul li {
@@ -114,6 +117,11 @@
 
     nav ul li a:hover {
         color: var(--green-dark);
+    }
+
+    nav .logo img {
+        height: calc(20dvh - 10dvh * var(--scrolled));
+        aspect-ratio: 1 / 1;
     }
 
     .logo {
